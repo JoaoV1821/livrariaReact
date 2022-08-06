@@ -15,11 +15,11 @@ const Header = () => {
       <nav className={navbar}>
         <Link to="/">Home</Link>
         <Link to="/livros">Livros</Link>
-        <Link to="/trending">Tendências</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </nav>
 
       <Link to='log-in'>
-        <Button primary text='Log in' />
+        <Button primary text='Sign up' />
       </Link>
     </header>
   )
