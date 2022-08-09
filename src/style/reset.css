@@ -5,19 +5,22 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 100%;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
+    width: 100%;
+
     /* variables */
     --caudex: 'Caudex', serif;
     --worksans: 'Work Sans', sans-serif;
     --montserrat: 'Montserrat', sans-serif;
 
 
-    --primary: #131313;
-    --secondary: #f7f7f7;
+    --primary: #1b2a41;
+    --secondary: #edd382;
+    --accent: #cfcdcd;
+    background-color: var(--primary);
 }

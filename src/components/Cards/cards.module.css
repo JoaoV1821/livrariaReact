@@ -1,0 +1,41 @@
+.bookContainer {
+    width: 150px;
+    height: 300px;
+    font-family: var(--montserrat);
+}
+
+.imgContainer {
+
+    display: flex;
+    place-content: center;
+    place-items: center;
+}
+
+.titleStyle {}
+
+.bookContainer {
+    padding: 1em;
+    background-color: #ffffff7c;
+    border-radius: 20px;
+    width: 200px;
+    height: max-content;
+}
+
+.bookContainer>p {
+    font-weight: 900;
+}
+
+.bookContainer>* {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.titleStyle {
+    font-size: 0.9rem;
+}
+
+.priceStyle {
+    font-size: 15px;
+}
+
+.authorStyle {}
