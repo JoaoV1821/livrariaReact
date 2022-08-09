@@ -6,7 +6,7 @@ const instance = axios.create({
 
 export const getBooks = async () => {
   const response = await instance.get("/livros");
-  const json = await response.data.livros;
+  const json = await response.data;
   return json;
 };
 
