@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Home from './pages/Home/Home.jsx';
 import Livros from './pages/Livros/Livros.jsx';
 import Dashboard from './pages/Dashboard/Dashboard.jsx';
+import DashboardForm from './pages/Dashboard/DashboardForm.jsx';
 
 const App = () => {
   return (
@@ -16,6 +17,8 @@ const App = () => {
         <Route path='/' element={<Home />}></Route>
         <Route path='/livros' element={<Livros />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
+        <Route path='/dashboard/edit/:id' element={<DashboardForm />}></Route>
+        <Route path='/dashboard/new' element={<DashboardForm />}></Route>
       </Switch>
 
       {/* <Footer/> */}

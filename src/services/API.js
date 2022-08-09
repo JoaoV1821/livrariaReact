@@ -10,18 +10,22 @@ export const getBooks = async () => {
   return json;
 };
 
-export const getBooksBy = async (categoria) => {
-
+export const getBookById = async (id) => {
+  const response = await instance.get(`/livros/${id}`);
+  const json = await response.data;
+  return json;
 };
 
-export const postProduto = async (body) => {
-
+export const addBook = async (body) => {
+  const response = await instance.post('/livros', body)
+  const json = await response.data.msg;
+  return json;
 };
 
-export const deleteProduto = async (id) => {
-
+export const removeBook = async (id) => {
+  const response = await instance.delete(`/livros/${id}`);
 };
 
-export const editaProduto = async (id, body) => {
-
+export const updateBook = async (id, body) => {
+  const response = await instance.put(`/livros/${id}`, body)
 };
