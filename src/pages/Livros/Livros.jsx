@@ -9,11 +9,10 @@ const Livros = () => {
   const [books, setBooks] = useState([])
 
   const requestBooks = async () => {
-    const response = await fetch('https://bookstore-mod4-v2.herokuapp.com/livros')
-    const json = await response.json()
-
-    setResponse(json)
-    setBooks(json)
+    const response = await getBooks()
+    console.log(response)
+    setResponse(response)
+    setBooks(response)
   }
 
   useEffect(() => {
