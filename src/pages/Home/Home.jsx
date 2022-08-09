@@ -3,7 +3,7 @@ import Button from '../../components/Button/Button'
 import Logo from '../../components/Logo/Logo'
 import { Link } from 'react-router-dom'
 import landingAnimation from '../../assets/landing-animation.svg'
-import style from './Home.module.css'
+import style from './home.module.css'
 
 const Home = () => {
   const { container, callToAction, imageContainer, image } = style
