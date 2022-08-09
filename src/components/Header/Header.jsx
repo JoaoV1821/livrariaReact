@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import Logo from '../Logo/Logo'
-import style from './Header.module.css'
+import style from './header.module.css'
 
 const Header = () => {
   const { header, navbar } = style
