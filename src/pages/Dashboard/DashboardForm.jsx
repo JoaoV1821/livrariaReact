@@ -59,14 +59,11 @@ const DashboardForm = () => {
 
 
           <nav className={navDashboard}>
-            <button onClick={() => {
-              navigate('/dashboard', { replace: true })
-            }}>Voltar</button>
             <button>Salvar</button>
             <button>Excluir</button>
             <button onClick={() => {
-              navigate('/dashboard/new', { replace: true })
-            }}>Criar livro</button>
+              navigate('/dashboard', { replace: true })
+            }}>Voltar</button>
           </nav>
         </aside>
 

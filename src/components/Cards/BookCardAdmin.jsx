@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import style from './Cards.module.css'
+import style from './cards.module.css'
 
 const BookCard = ({ data }) => {
   const { bookContainer, imgContainer, titleStyle, priceStyle, authorStyle } = style
@@ -19,7 +19,6 @@ const BookCard = ({ data }) => {
       <Link to={`/dashboard/edit/${id}`}>
         <button>🪶</button>
       </Link>
-      <button>❌</button>
     </div>
   )
 }

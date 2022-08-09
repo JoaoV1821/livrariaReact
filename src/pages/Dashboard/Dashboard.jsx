@@ -33,9 +33,6 @@ const Dashboard = () => {
             <button onClick={() => {
               navigate('/dashboard/new', { replace: true })
             }}>Inserir livro</button>
-            <button onClick={() => {
-              navigate('/dashboard', { replace: true })
-            }}>Livros cadastrados</button>
           </nav>
         </aside>
 
