@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import BookCard from '../../components/Cards/BookCard'
-import style from './Livros.module.css'
+import style from './livros.module.css'
 import { getBooks } from '../../services/API'
 
 const Livros = () => {
