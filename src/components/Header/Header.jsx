@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
+import Logo from '../Logo/Logo'
 import style from './Header.module.css'
 
 const Header = () => {
@@ -8,9 +9,7 @@ const Header = () => {
 
   return (
     <header className={header}>
-      <h1>
-        bookstore
-      </h1>
+      <Logo />
 
       <nav className={navbar}>
         <Link to="/">Home</Link>
