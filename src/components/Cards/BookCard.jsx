@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './Cards.module.css'
+import style from './cards.module.css'
 
 const BookCard = ({ data }) => {
   const { bookContainer, imgContainer, titleStyle, priceStyle, authorStyle } = style
