@@ -1,29 +1,33 @@
 .header {
-    height: 50px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    color: var(--secondary);
 }
 
-.header>h1 {
+/* .header>h1 {
     font-size: 4vmin;
     font-weight: 700;
     font-family: var(--caudex);
     text-transform: capitalize;
     letter-spacing: -1px;
-}
+} */
 
 .navbar {}
 
 .navbar>a {
     all: unset;
+    cursor: pointer;
     display: inline-block;
     position: relative;
     padding: 12px;
     font-family: var(--worksans);
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-stretch: normal;
+    font-style: normal;
     letter-spacing: -1px;
 }
 
@@ -36,7 +40,7 @@
     position: absolute;
     transform: scaleX(0);
     transform-origin: bottom;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     transition: transform 0.25s ease-out;
 }
 

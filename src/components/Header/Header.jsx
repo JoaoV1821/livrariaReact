@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
+import Logo from '../Logo/Logo'
 import style from './header.module.css'
 
 const Header = () => {
@@ -8,18 +9,16 @@ const Header = () => {
 
   return (
     <header className={header}>
-      <h1>
-        bookstore
-      </h1>
+      <Logo />
 
       <nav className={navbar}>
         <Link to="/">Home</Link>
         <Link to="/livros">Livros</Link>
-        <Link to="/trending">Tendências</Link>
+        <Link to="/dashboard">Dashboard</Link>
       </nav>
 
       <Link to='log-in'>
-        <Button primary text='Log in' />
+        <Button primary text='Login' />
       </Link>
     </header>
   )

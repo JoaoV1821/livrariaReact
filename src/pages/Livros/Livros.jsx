@@ -1,33 +1,61 @@
-import React, {useEffect, useState} from 'react'
+import React, { useState, useEffect } from 'react'
+import BookCard from '../../components/Cards/BookCard'
+import style from './livros.module.css'
+import { getBooks } from '../../services/API'
 
 const Livros = () => {
-    const [request, setRequest] = useState([]);
+  const { container, categorias, livros, aside, navCategorias, livrosGrid } = style
+  const [response, setResponse] = useState([])
+  const [books, setBooks] = useState([])
 
-    const searchBooks = async () => {
-        const url = 'https://bookstore-mod4-v2.herokuapp.com/livros';
+  const requestBooks = async () => {
+    const response = await getBooks()
+    console.log(response)
+    setResponse(response)
+    setBooks(response)
+  }
 
-        const data =  await fetch(url);
+  useEffect(() => {
+    requestBooks()
+  }, [])
 
-        const json = await data.json();
-        console.log(json)
-        setRequest(json);
+  console.log(books)
 
-    }
+  const handleClick = (target) => {
+    const categoria = target.innerHTML
 
-    
-    useEffect(() => {
+    setBooks([...response].filter(el => el.categoria == categoria))
+  }
 
-      return () => {
-        searchBooks();
-        
-      };
-    }, [])
- 
+
   return (
-    <main>
-        {showBooks()}
-    </main>
+    <section className={container}>
+
+      <div className={categorias}>
+        <aside className={aside}>
+          <h1>Categorias</h1>
+
+          <nav className={navCategorias}>
+            {[...new Set(response.map(el => el.categoria))].map(el => <button onClick={({ target }) => handleClick(target)}>{el}</button>)}
+
+            <button onClick={requestBooks}>Limpar filtro</button>
+          </nav>
+          <br />
+
+        </aside>
+
+      </div>
+
+      <div className={livros}>
+        <div className={livrosGrid}>
+          {books.map(el => <BookCard data={el} />)}
+
+
+        </div>
+      </div>
+    </section>
   )
 }
 
 export default Livros
+
