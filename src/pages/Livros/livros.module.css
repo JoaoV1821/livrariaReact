@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     margin: auto;
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
     overflow: hidden;
     height: calc(100vh - 100px);
@@ -88,4 +88,38 @@
 .navCategorias>button:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+@media (max-width: 321px) and (min-width: 10px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .categorias {
+        width: 100%;
+        height: 50%;
+    }
+    
+    .aside{
+        margin-top: -45px;
+
+        width: 100%;
+        height: 300px;
+        font-size: 0.5em;
+    }
+
+    /* .aside>*{
+        width: 100%;
+    } */
+
+    .livros {
+        width: 100%;
+        height: auto;
+    }
+    /* .categorias {
+        
+    } */
 }
