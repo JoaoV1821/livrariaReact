@@ -52,7 +52,7 @@ const DashboardForm = () => {
   }
 
   async function handleSave() {
-    await getBookById(params.id) != undefined ? await updateBook(params.id, formData) : await addBook(formData)
+    params.new != 'new' ? await updateBook(params.id, formData) : await addBook(formData)
     navigate('/dashboard', { replace: true })
   }
 

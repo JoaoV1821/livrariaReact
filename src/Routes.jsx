@@ -18,12 +18,12 @@ const App = () => {
 
       <Switch>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/livros' element={<Livros/>}></Route>
+        <Route path='/livros' element={<Livros />}></Route>
         <Route path='/livros' element={<Livros />}></Route>
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/dashboard/edit/:id' element={<DashboardForm />}></Route>
-        <Route path='/dashboard/new' element={<DashboardForm />}></Route>
-        <Route path='/log-in' element={<Login/>}></Route>
+        <Route path='/dashboard/:new' element={<DashboardForm />}></Route>
+        <Route path='/log-in' element={<Login />}></Route>
       </Switch>
 
       {/* <Footer/> */}
