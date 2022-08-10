@@ -49,8 +49,6 @@ const Livros = () => {
       <div className={livros}>
         <div className={livrosGrid}>
           {books.map(el => <BookCard data={el} />)}
-
-
         </div>
       </div>
     </section>
@@ -58,3 +56,4 @@ const Livros = () => {
 }
 
 export default Livros
+
