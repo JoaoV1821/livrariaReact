@@ -18,7 +18,7 @@ const Header = () => {
       </nav>
 
       <Link to='log-in'>
-        <Button primary text='Sign up' />
+        <Button primary text='Log in' />
       </Link>
     </header>
   )

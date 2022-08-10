@@ -1,10 +1,9 @@
 import React from 'react'
 import style from './Dashboard.module.css'
-import { useState, useEffect } from 'react'
-import { addBook, getBookById, getBooks, updateBook } from '../../services/API'
-import BookCardAdmin from '../../components/Cards/BookCardAdmin'
-import { useNavigate, useParams } from 'react-router-dom'
 import Fieldsets from '../../components/Fieldsets/Fieldsets'
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import { addBook, getBookById, removeBook, updateBook } from '../../services/API'
 
 const DashboardForm = () => {
   const { container, aside, sidePanel, navDashboard, formContainer, form } = style
@@ -47,8 +46,14 @@ const DashboardForm = () => {
     setFormData({ ...formData, [key]: value })
   }
 
-  function handleSave(isEdit) {
-    isEdit ? updateBook(params.id, formData) : addBook(formData)
+  async function handleDelete() {
+    await removeBook(params.id)
+    navigate('/dashboard', { replace: true })
+  }
+
+  async function handleSave() {
+    await getBookById(params.id) != undefined ? await updateBook(params.id, formData) : await addBook(formData)
+    navigate('/dashboard', { replace: true })
   }
 
   return (
@@ -59,11 +64,9 @@ const DashboardForm = () => {
 
 
           <nav className={navDashboard}>
-            <button>Salvar</button>
-            <button>Excluir</button>
-            <button onClick={() => {
-              navigate('/dashboard', { replace: true })
-            }}>Voltar</button>
+            <button onClick={handleSave}>Salvar</button>
+            <button onClick={handleDelete}>Excluir</button>
+            <button onClick={() => navigate('/dashboard', { replace: true })}>Voltar</button>
           </nav>
         </aside>
 

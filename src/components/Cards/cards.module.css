@@ -38,3 +38,14 @@
 }
 
 .authorStyle {}
+
+.bookContainer>a>button {
+    all: unset;
+}
+
+.bookContainer>a {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 25px
+}
