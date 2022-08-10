@@ -185,3 +185,13 @@
         height: auto;
     }
 }
+
+@media (max-width: 769px) and (min-width: 426px) {
+    .categorias {
+        width: 35%;
+    }
+
+    .livros {
+        padding: 10px;
+    }
+}
