@@ -17,7 +17,7 @@ const Header = () => {
         <Link to="/dashboard">Dashboard</Link>
       </nav>
 
-      <Link to='log-in'>
+      <Link to='login'>
         <Button primary text='Log in' />
       </Link>
     </header>
