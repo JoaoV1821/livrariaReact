@@ -23,7 +23,7 @@ const App = () => {
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/dashboard/edit/:id' element={<DashboardForm />}></Route>
         <Route path='/dashboard/:new' element={<DashboardForm />}></Route>
-        <Route path='/log-in' element={<Login />}></Route>
+        <Route path='/login' element={<Login />}></Route>
       </Switch>
 
       {/* <Footer/> */}
