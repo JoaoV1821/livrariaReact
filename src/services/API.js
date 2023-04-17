@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://bookstore-mod4-v2.herokuapp.com",
+  baseURL: "https://livraria-api-v2.onrender.com", 
 });
 
 export const getBooks = async () => {
